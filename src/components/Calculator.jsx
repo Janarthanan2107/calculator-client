@@ -62,7 +62,13 @@ const Calculator = ({ display, setDisplay }) => {
                 <Button
                   key={index}
                   onClick={() => handleOnClick(btn)}
-                  className="text-white bg-slate-500 p-6 m-2 rounded-lg"
+                  className={`text-white bg-slate-500 p-6 m-2 rounded-lg hover:bg-blue-600 ${
+                    btn === "="
+                      ? "hover:bg-green-600"
+                      : btn === "c"
+                      ? "hover:bg-red-600"
+                      : ""  
+                  }`}
                 >
                   {btn}
                 </Button>
@@ -75,7 +81,7 @@ const Calculator = ({ display, setDisplay }) => {
               <Button
                 key={index}
                 onClick={() => handleOnClick(btn)}
-                className="text-white bg-slate-500 p-6 m-2 rounded-lg"
+                className="text-white bg-slate-500 p-6 m-2 rounded-lg hover:bg-orange-400"
               >
                 {btn}
               </Button>

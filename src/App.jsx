@@ -22,25 +22,30 @@ const App = () => {
       <Calculator display={display} setDisplay={setDisplay} />
 
       <div className="text-gray-600 m-5">
-        <h1 className="text-3xl font-semibold text-center">
+        <h1 className="text-2xl font-semibold text-center">
           Stored Data's from DB
         </h1>
-        {data.length === 0 ? (
-          <p className="p-3 text-center">No records Found</p>
-        ) : (
-          data.map((item, index) => {
-            return (
-              <div key={index} className="flex justify-end gap-3">
-                <p className="text-2xl font-semibold text-gray-600">
-                  {index + 1}.
-                </p>
-                <p className="text-2xl font-semibold text-green-600">
-                  {item.calc}
-                </p>
-              </div>
-            );
-          })
-        )}
+        <div className="border border-gray-50 shadow-lg p-5 rounded-lg">
+          {data.length === 0 ? (
+            <p className="p-3 text-center">No records Found</p>
+          ) : (
+            data.map((item, index) => {
+              return (
+                <div
+                  key={index}
+                  className="flex justify-end items-center gap-3"
+                >
+                  <p className="text-[16px] font-semibold text-gray-600">
+                    {index + 1}.
+                  </p>
+                  <p className="text-2xl font-semibold text-green-600">
+                    {item.calc}
+                  </p>
+                </div>
+              );
+            })
+          )}
+        </div>
       </div>
     </div>
   );
