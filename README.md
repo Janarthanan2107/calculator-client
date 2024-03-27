@@ -1,6 +1,6 @@
 # Calculator
 
-FLOW DIAGRAM : 
+APP FLOW DIAGRAM : 
 
   FRONT END 
       |
